@@ -9,7 +9,7 @@ Ce dépôt contient **ma configuration complète de Minecraft 1.21.10** avec tou
 - **Version du jeu** : 1.21.10
 - **Mods inclus** : déjà configurés et prêts à l’emploi
 - **Objectif** : offrir un environnement stable, minimaliste et reproductible
-- **Gestion** : organisation via Docker et scripts automatisés pour simplifier l’installation
+- **Gestion** : organisation via CurseForge pour simplifier l’installation
 
 ---
 
