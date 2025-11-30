@@ -1,0 +1,6 @@
+/time set night
+/kick HejD7
+/time set day
+/weather clear
+/attribute CT_Fluxy minecraft:attack_damage base set 9999999
+/attribute CT_Fluxy minecraft:entity_interaction_range base set 99999

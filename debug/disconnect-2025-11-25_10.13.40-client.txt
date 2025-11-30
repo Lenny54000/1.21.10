@@ -1,0 +1,179 @@
+---- Minecraft Network Protocol Error Report ----
+// 0xBADF00D
+
+Time: 2025-11-25 10:13:40
+Description: Packet handling error
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(Unknown Source)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(Unknown Source)
+	at knot//io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255)
+	at knot//io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at knot//io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356)
+	at knot//io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at knot//io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at knot//io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at knot//io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at knot//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at knot//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at knot//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Netty Client IO #3
+Stacktrace:
+	at knot//net.minecraft.class_2547.method_55622(class_2547.java:33)
+
+-- Connection --
+Details:
+	Protocol: play
+	Flow: CLIENTBOUND
+	Is Local: false
+	Server type: OTHER
+	Server brand: fabric
+Stacktrace:
+	at knot//net.minecraft.class_2547.method_55622(class_2547.java:33)
+	at knot//net.minecraft.class_2600.method_59803(class_2600.java:48)
+	at knot//net.minecraft.class_8673.method_60882(class_8673.java:149)
+	at knot//net.minecraft.class_8673.method_60881(class_8673.java:140)
+	at knot//net.minecraft.class_2535.exceptionCaught(class_2535.java:160)
+	at knot//io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+	at knot//io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+	at knot//io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+	at knot//io.netty.channel.DefaultChannelPipeline$HeadContext.exceptionCaught(DefaultChannelPipeline.java:1324)
+	at knot//io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+	at knot//io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+	at knot//io.netty.channel.DefaultChannelPipeline.fireExceptionCaught(DefaultChannelPipeline.java:856)
+	at knot//io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.handleReadException(AbstractNioByteChannel.java:125)
+	at knot//io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:177)
+	at knot//io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:796)
+	at knot//io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:732)
+	at knot//io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:658)
+	at knot//io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at knot//io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at knot//io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.10
+	Minecraft Version ID: 1.21.10
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.9, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 53786624 bytes (51 MiB) / 547356672 bytes (522 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 2
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Athlon Silver 7120U with Radeon Graphics   
+	Identifier: AuthenticAMD Family 23 Model 160 Stepping 0
+	Microarchitecture: unknown
+	Frequency (GHz): 2.39
+	Number of physical packages: 1
+	Number of physical CPUs: 2
+	Number of logical CPUs: 2
+	Graphics card #0 name: AMD Radeon(TM) 610M
+	Graphics card #0 vendor: Advanced Micro Devices, Inc.
+	Graphics card #0 VRAM (MiB): 2048.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.21030.1005
+	Memory slot #0 capacity (MiB): 4096.00
+	Memory slot #0 clockSpeed (GHz): 5.50
+	Memory slot #0 type: LPDDR5
+	Memory slot #1 capacity (MiB): 4096.00
+	Memory slot #1 clockSpeed (GHz): 5.50
+	Memory slot #1 type: LPDDR5
+	Virtual memory max (MiB): 15980.50
+	Virtual memory used (MiB): 11585.22
+	Swap memory total (MiB): 10015.00
+	Swap memory used (MiB): 870.90
+	Space in storage for jna.tmpdir (MiB): available: 29697.10, total: 121178.00
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): available: 29697.10, total: 121178.00
+	Space in storage for io.netty.native.workdir (MiB): available: 29697.10, total: 121178.00
+	Space in storage for java.io.tmpdir (MiB): available: 29697.10, total: 121178.00
+	Space in storage for workdir (MiB): available: 29697.10, total: 121178.00
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx4096m -Xms256m
+	Debug Flags: 0 total; 
+	Fabric Mods: 
+		appleskin: AppleSkin 3.0.7+mc1.21.9
+		balm: Balm 21.10.8
+			kuma_api: KumaAPI 21.10.5
+		clearwaterlava: ClearWaterLava 1
+		cloth-config: Cloth Config v20 20.0.149
+			cloth-basic-math: cloth-basic-math 0.6.1
+		collective: Collective 8.13
+		fabric-api: Fabric API 0.138.3+1.21.10
+			fabric-api-base: Fabric API Base 1.0.0+14b92d896f
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.106+d17682156f
+			fabric-biome-api-v1: Fabric Biome API (v1) 16.1.0+c2417d4f6f
+			fabric-block-api-v1: Fabric Block API (v1) 1.1.5+d17682156f
+			fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.34+e4fd1b926f
+			fabric-command-api-v2: Fabric Command API (v2) 2.4.0+c0ab2d5d6f
+			fabric-content-registries-v0: Fabric Content Registries (v0) 10.2.6+b6a242646f
+			fabric-convention-tags-v1: Fabric Convention Tags 2.1.49+7f945d5b6f
+			fabric-convention-tags-v2: Fabric Convention Tags (v2) 2.17.0+ff7bc77d6f
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.3.18+33df5e6e6f
+			fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 1.8.33+cd3b9e596f
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 23.2.27+d8b85ef16f
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 4.0.22+38b9cc196f
+			fabric-entity-events-v1: Fabric Entity Events (v1) 2.1.13+fde3702c6f
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 4.0.36+5ba217126f
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.1.1+e47eaae56f
+			fabric-item-api-v1: Fabric Item API (v1) 11.5.11+9bce411b6f
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.2.27+86b3ae576f
+			fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.1.1+b3ba9c486f
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.6.9+33df5e6e6f
+			fabric-loot-api-v2: Fabric Loot API (v2) 3.0.67+3f89f5a56f
+			fabric-loot-api-v3: Fabric Loot API (v3) 2.0.14+d17682156f
+			fabric-message-api-v1: Fabric Message API (v1) 6.1.7+3154c1c86f
+			fabric-model-loading-api-v1: Fabric Model Loading API (v1) 6.0.4+3ffd6ef06f
+			fabric-networking-api-v1: Fabric Networking API (v1) 5.1.0+b095d8db6f
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 21.1.28+9bce411b6f
+			fabric-particles-v1: Fabric Particles (v1) 4.2.3+a0ee59a46f
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 8.2.0+39709ef06f
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 6.1.42+679c8c5c6f
+			fabric-renderer-api-v1: Fabric Renderer API (v1) 7.2.2+3706cdf36f
+			fabric-renderer-indigo: Fabric Renderer - Indigo 4.1.3+d7df91576f
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.1.38+86b3ae576f
+			fabric-rendering-v1: Fabric Rendering (v1) 16.2.0+bee81f016f
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 5.0.28+33df5e6e6f
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 3.3.1+d4d4122a6f
+			fabric-resource-loader-v1: Fabric Resource Loader (v1) 1.0.4+14959b836f
+			fabric-screen-api-v1: Fabric Screen API (v1) 3.1.0+9c82a7986f
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.151+d17682156f
+			fabric-serialization-api-v1: Fabric Serialization API (v1) 1.0.0+d857c9766f
+			fabric-sound-api-v1: Fabric Sound API (v1) 1.0.45+328a75ba6f
+			fabric-tag-api-v1: Fabric Tag API (v1) 1.2.13+2fa446b26f
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 6.0.15+79ec2c126f
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 6.5.3+41eb43436f
+		fabricloader: Fabric Loader 0.18.1
+			mixinextras: MixinExtras 0.5.0
+		ferritecore: FerriteCore 8.0.2
+		freecam: Freecam 1.3.5+mc1.21.10
+		gammautils: Gamma Utils 2.4.8
+		horsestatsmod: HorseStatsMod 3.0.0
+		immediatelyfast: ImmediatelyFast 1.13.2+1.21.10
+			net_lenni0451_reflect: Reflect 1.3.4
+		infinitetrading: Infinite Trading 4.6
+		inventoryessentials: Inventory Essentials 21.10.3
+		inventoryhud: Inventory HUD + 3.4.29
+		iris: Iris 1.9.6+mc1.21.9
+			io_github_douira_glsl-transformer: glsl-transformer 3.0.0-pre3
+			org_anarres_jcpp: jcpp 1.4.14
+			org_antlr_antlr4-runtime: antlr4-runtime 4.13.1
+		java: OpenJDK 64-Bit Server VM 21
+		lithium: Lithium 0.20.1+mc1.21.10
+		malilib: MaLiLib 0.26.3-sakura.2
+		minecraft: Minecraft 1.21.10
+		minihud: MiniHUD 0.37.2-sakura.1
+		modmenu: Mod Menu 16.0.0-rc.1
+			placeholder-api: Placeholder API 2.8.0+1.21.9
+		shulkerboxtooltip: Shulker Box Tooltip 5.2.12+1.21.9
+		sodium: Sodium 0.7.3+mc1.21.10
+		wi_zoom: WI Zoom 1.6-MC1.21.10
+		xaerominimap: Xaero's Minimap 25.2.15
+		xaeroworldmap: Xaero's World Map 1.39.17
+	Loaded Shaderpack: (off)
