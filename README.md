@@ -52,21 +52,18 @@ Ce dépôt contient **ma configuration complète de Minecraft 1.21.10** avec tou
 
 ## ⚙️ Configuration
 - Les fichiers de configuration sont déjà ajustés pour éviter les conflits.
-- Whitelist réduite pour limiter les effets de bord.
-- Logs et dépendances organisés pour faciliter le diagnostic.
+- Logs et dépendances organisés pour être plug and play.
 
 ---
 
 ## 📖 Objectifs du projet
-- Fournir une base stable pour tester des stratégies et automatisations.
-- Maintenir un environnement reproductible et minimaliste.
-- Expérimenter avec des workflows CurseForge + Minecraft moddé.
+- Fournir une base stable pour jouer avec une configuration déjà pête.
+- Expérimenter avec des mods utiles.
 
 ---
 
 ## 🤝 Contribution
 Les suggestions et améliorations sont les bienvenues !  
-N’hésitez pas à ouvrir une **issue** ou proposer une **pull request**.
 
 ---
 
