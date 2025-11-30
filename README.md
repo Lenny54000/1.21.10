@@ -18,9 +18,8 @@ Ce dépôt contient **ma configuration complète de Minecraft 1.21.10** avec tou
    ```bash
    git clone https://github.com/Lenny54000/1.21.10.git
    ```
-2. Placez les fichiers dans votre dossier `.minecraft` ou lancez via votre launcher préféré.
-3. Vérifiez que vous utilisez bien la version **1.21.10**.
-4. Lancez le jeu et profitez 🎉.
+2. Placez les fichiers dans votre dossier `curseforge\minecraft\Instances`.
+3. Lancez le jeu et profitez 🎉.
 
 ---
 
@@ -78,9 +77,3 @@ Vous êtes libre de l’utiliser, le modifier et le partager.
 ---
 
 ✨ *Version actuelle : 1.21.10 – Mods préconfigurés et prêts à l’emploi.*
-```
-
----
-
-👉 Tu peux directement copier-coller ce README dans ton dépôt.  
-Veux-tu que je prépare aussi un **badge visuel** (par exemple “Minecraft 1.21.10” ou “Mods Ready”) pour rendre ton README encore plus stylé et professionnel ?
